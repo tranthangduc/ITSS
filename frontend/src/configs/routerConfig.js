@@ -128,7 +128,7 @@ const routes = [
   {
     path: ROUTES.STORY,
     exact: false,
-    isProtect: true,
+    isProtect: false,
     component: () => <StoryPage />,
   },
   {
