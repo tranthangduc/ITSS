@@ -45,6 +45,9 @@ function Navigation() {
             </Link>
           )}
 
+          <div style={{ fontSize: "18px", fontWeight: "600", marginLeft: "20px" }}>
+            <p>Minna no Eigo</p>
+          </div>
           {/* control, setting */}
           <div className={`${classes.control} flex-center--ver`}>
             {showInput && !isXsDevice && (
