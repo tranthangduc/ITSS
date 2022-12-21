@@ -16,6 +16,8 @@ import { ROUTES } from 'constant';
 import useScrollTop from 'hooks/useScrollTop';
 import useTitle from 'hooks/useTitle';
 import React from 'react';
+import logoUrl from 'assets/images/sach.jpg';
+import useStyle from '../components/popup';
 
 const FEATURE_LIST = [
   /*{
@@ -104,25 +106,66 @@ const FEATURE_LIST = [
 
 function HomePage() {
   useTitle(' Học tiếng Anh');
-  useScrollTop();
-
+  // useScrollTop();
+  const classes = useStyle();
   return (
-    <div className="container my-10">
-      {
-        <Grid container spacing={3}>
-          {FEATURE_LIST.map((box, index) => (
-            <Grid item xs={12} md={6} lg={4} key={index}>
-              <FeatureBox
-                imgUrl={box.imgUrl}
-                title={box.title}
-                to={box.to}
-                subTitle={box.subTitle}
-              />
+    <div
+      style={{
+        height: "100%", width: "75%", margin: "30px auto", display: "flex",
+        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+        border: "1px solid #c3c3c3",
+        borderRadius: "4px",
+      }}
+    >
+      <div className={classes.bg}>
+        <div className="container my-10">
+          <div
+            style={{
+              margin: "110px 0 130px 0",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <p style={{ fontSize: "28px", fontWeight: "700" }}>Minna no Eigo</p>
+              <h3>Đem tiếng Anh đến với mọi người</h3>
+            </div>
+          </div>
+          {
+            <Grid container
+              direction="row"
+              justifyContent="space-around"
+              alignItems="center"
+            >
+              {FEATURE_LIST.map((box, index) => (
+                <Grid item xs={8} md={8} lg={4} key={index}>
+                  <FeatureBox
+                    imgUrl={box.imgUrl}
+                    title={box.title}
+                    to={box.to}
+                    subTitle={box.subTitle}
+                  />
+                </Grid>
+              ))}
             </Grid>
-          ))}
-        </Grid>
-      }
+            // <Grid container spacing={2} columns={16}>
+            //   {FEATURE_LIST.map((box, index) => (
+            //     <Grid item xs={8} md={8} lg={4} key={index}>
+            //       <FeatureBox
+            //         imgUrl={box.imgUrl}
+            //         title={box.title}
+            //         to={box.to}
+            //         subTitle={box.subTitle}
+            //       />
+            //     </Grid>
+            //   ))}
+            // </Grid>
+          }
+        </div>
+      </div>
     </div>
+
   );
 }
 

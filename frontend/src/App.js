@@ -15,7 +15,6 @@ import { Element } from 'react-scroll';
 import { getUserInfo } from 'redux/slices/userInfo.slice';
 
 const { routes, renderRoutes } = routerConfig;
-
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
@@ -31,7 +30,7 @@ function App() {
   useEffect(() => {
     dispatch(getUserInfo());
     setLoading(false);
-    return () => {};
+    return () => { };
   }, []);
 
   return (
@@ -54,12 +53,12 @@ function App() {
                   </Route>
                 </Switch>
               </Suspense>
-
-              {/* common component */}
-              <div id="_overlay"></div>
-              <Message />
-              <SpeedDials />
             </div>
+
+            {/* common component */}
+            <div id="_overlay"></div>
+            <Message />
+            <SpeedDials />
           </Router>
         </ThemeProvider>
       )}
