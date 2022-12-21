@@ -48,7 +48,9 @@ function FavoriteDictionary({
 
       {/* list content */}
       <div style={{width: "800px", padding: "0 10px"}} className={classes.contentWrap}>
-        <div className={`${classes.listWrap} w-100`}>
+      <div
+          className={`${classes.listWrap} w-100`}
+          style={{ display: 'flex' }}>
           <ul id="dictionaryId" className={`${classes.list} flex-col w-100`}>
             <h3 className="notfound-title h-100 flex-center t-center">
               {
@@ -61,6 +63,10 @@ function FavoriteDictionary({
               }
             </h3>
           </ul>
+          <div
+            style={{display:'flex', justifyContent:'center', width: '20%', backgroundColor: 'white'}}>
+            <h2 style={{color:'#6e6e6e'}}>Từ vựng đã lưu</h2>
+          </div>
         </div>
       </div>
     </div>
