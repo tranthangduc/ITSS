@@ -72,6 +72,7 @@ exports.getWordById = async id => {
       picture: searchResult.picture,
       phonetic: searchResult.phonetic,
       mean: searchResult.mean,
+      phonetic: searchResult.phonetic
     }
   }
 }

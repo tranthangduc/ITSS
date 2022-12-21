@@ -33,6 +33,10 @@ const wordApi = {
       params: { page, perPage, sortType },
     });
   },
+
+  getMeanOfWord: (id) => {
+    return axiosClient.get(`${URL}/${id}`);
+  },
 };
 
 export default wordApi;
