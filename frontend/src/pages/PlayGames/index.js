@@ -45,7 +45,7 @@ const GAME_LIST = [
   /*  {
     title: 'Ai là triệu phú',
     subTitle:
-      'Trải nghiệm game show truyền hình "Ai là triệu phú" phiên bản tiếng Anh ngay với ENG_ITSS',
+      'Trải nghiệm game show truyền hình "Ai là triệu phú" phiên bản tiếng Anh ngay với Minna no Eigo',
     imgUrl: millionaireIcon,
     to: GAMES.MILLIONAIRE,
   },

@@ -34,7 +34,7 @@ const FEATURE_LIST = [
   {
     title: 'Từ vựng với Flashcard',
     subTitle:
-      'Flashcard phương pháp học từ vựng nổi tiếng. Nay hoàn toàn miễn phí trên ENG_ITSS',
+      'Flashcard phương pháp học từ vựng nổi tiếng. Nay hoàn toàn miễn phí trên Minna no Eigo',
     imgUrl: flashcardIcon,
     to: ROUTES.FLASHCARD,
   },
@@ -51,7 +51,7 @@ const FEATURE_LIST = [
     to: ROUTES.STORY,
   }, */
   /*{
-    title: 'Từ điển trong ENG_ITSS',
+    title: 'Từ điển trong Minna no Eigo',
     subTitle: 'Danh sách từ vựng được phân loại theo cấp độ, loại từ, ...',
     imgUrl: dictionaryIcon,
     to: ROUTES.DYNO_DICTIONARY,
@@ -97,13 +97,13 @@ const FEATURE_LIST = [
     title: 'Đóng góp',
     imgUrl: editIcon,
     subTitle:
-      'ENG_ITSS rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
+      'Minna no Eigo rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
     to: ROUTES.CONTRIBUTION,
   }, */
 ];
 
 function HomePage() {
-  useTitle('ENG_ITSS - Học tiếng Anh');
+  useTitle(' Học tiếng Anh');
   useScrollTop();
 
   return (

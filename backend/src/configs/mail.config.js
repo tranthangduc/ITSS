@@ -22,7 +22,7 @@ const sendEmail = async ({ to, subject, text, html, ...rest }) => {
       //config mail
       const mail = {
         //sender access
-        from: '"ENG_ITSS" <no-reply@accounts.hama.herokuapp.com>',
+        from: '"Minna no Eigo" <no-reply@accounts.hama.herokuapp.com>',
         //receiver access
         to,
         //subject

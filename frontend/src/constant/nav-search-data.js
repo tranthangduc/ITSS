@@ -24,9 +24,9 @@ const NAV_SEARCH_DATA = [
     to: ROUTES.FLASHCARD,
   },
   {
-    title: 'từ điển ENG_ITSS',
+    title: 'từ điển Minna no Eigo',
     searchKey:
-      'danh sách từ phân loại cấp độ vocabulary dictionary level type list ENG_ITSS',
+      'danh sách từ phân loại cấp độ vocabulary dictionary level type list Minna no Eigo',
     to: ROUTES.DYNO_DICTIONARY,
   },
   {

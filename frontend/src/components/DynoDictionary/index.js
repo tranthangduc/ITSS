@@ -26,7 +26,7 @@ function DynoDictionary({
     <div className={`${classes.root} dyno-container`}>
       {/* title - menu */}
       <div className="flex-center-between">
-        <h1 className="dyno-title">Từ điển ENG_ITSS</h1>
+        <h1 className="dyno-title">Từ điển Minna no Eigo</h1>
         <div>
           <WordSortModal
             onSelect={onSortTypeChange}
