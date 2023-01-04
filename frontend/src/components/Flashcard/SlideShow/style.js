@@ -4,7 +4,9 @@ export default makeStyles(() => ({
   wrapper: {
     height: 'calc(100vh - 20rem)',
   },
-
+  color_button: {
+    color: 'red',
+  },
   skeleton: {
     borderTopLeftRadius: '64px',
     borderBottomRightRadius: '64px',

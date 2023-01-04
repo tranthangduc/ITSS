@@ -142,28 +142,28 @@ export const WORD_LEVELS = [
     label: 'Chưa xác định',
   },
   {
-    value: 'A1',
-    label: 'A1',
+    value: '200+',
+    label: 'Toeic 200+',
   },
   {
-    value: 'A2',
-    label: 'A2',
+    value: '300+',
+    label: 'Toeic 300+',
   },
   {
-    value: 'B1',
-    label: 'B1',
+    value: '400+',
+    label: 'Toeic 400+',
   },
   {
-    value: 'B2',
-    label: 'B2',
+    value: '500+',
+    label: 'Toeic 500+',
   },
   {
-    value: 'C1',
-    label: 'C1',
+    value: '600+',
+    label: 'Toeic 600+',
   },
   {
-    value: 'C2',
-    label: 'C2',
+    value: '700+',
+    label: 'Toeic 700+',
   },
 ];
 

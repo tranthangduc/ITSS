@@ -26,7 +26,7 @@ function Flashcard({
   onNextPage,
   onPrevPage,
   onWordPackChange,
-
+  gotoPage,
   currentTopicPackChange,
   openTopicPackChange,
 }) {
@@ -88,6 +88,7 @@ function Flashcard({
             total={Math.ceil(total / perPage)}
             current={currentPage}
             showMean={isShowMean}
+            gotoPage={gotoPage}
           />
         ) : (
           <SlideShow
@@ -115,6 +116,7 @@ Flashcard.propTypes = {
   onNextPage: PropTypes.func,
   onPrevPage: PropTypes.func,
   onWordPackChange: PropTypes.func,
+  gotoPage: PropTypes.func
 };
 
 Flashcard.defaultProps = {

@@ -54,12 +54,14 @@ function SlideShow({
 
           {/* navigation arrow */}
           {count > 0 && (
-            <Tooltip title="Lùi trang cũ">
-              <span className="nav-arrow prev" onClick={onPrev} />
+            <Tooltip title="Lùi trang cũ" style = {{color: 'red'}}>
+              <span className="nav-arrow prev"  onClick={onPrev} />
             </Tooltip>
           )}
           {count + 1 < total && (
-            <Tooltip title="Trang kế tiếp">
+            <Tooltip title="Trang kế tiếp" sx={{
+              color: 'red'
+            }}>
               <span className="nav-arrow next" onClick={onNext} />
             </Tooltip>
           )}
