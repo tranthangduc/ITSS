@@ -3,17 +3,18 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   root: {
     padding: '1.8rem 1.2rem',
-    boxShadow: 'var(--box-shadow-2)',
+    boxShadow: '5px 10px #888888',
     borderRadius: 'var(--sm-border-radius)',
     cursor: 'pointer',
-    backgroundColor: 'var(--bg-color-accent)',
+    backgroundColor: '#e4ff00',
     transition: 'all 0.25s',
 
     minHeight: '8rem',
     height: '100%',
 
     '&:hover, &:active': {
-      backgroundColor: 'var(--hover-color)',
+      backgroundColor: '#ecff47',
+      boxShadow: '5px 10px #bfbfbf',
     },
 
     [theme.breakpoints.up('sm')]: {
