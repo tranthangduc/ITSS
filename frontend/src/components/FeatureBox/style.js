@@ -3,17 +3,18 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   root: {
     padding: '1.8rem 1.2rem',
-    boxShadow: 'var(--box-shadow-2)',
+    boxShadow: '5px 10px #888888',
     borderRadius: 'var(--sm-border-radius)',
     cursor: 'pointer',
-    backgroundColor: 'var(--bg-color-accent)',
+    backgroundColor: '#506DFA',
     transition: 'all 0.25s',
 
     minHeight: '8rem',
     height: '100%',
 
     '&:hover, &:active': {
-      backgroundColor: 'var(--hover-color)',
+      backgroundColor: '#669dd7',
+      boxShadow: '5px 10px #a7a4a4',
     },
 
     [theme.breakpoints.up('sm')]: {
@@ -32,7 +33,7 @@ export default makeStyles((theme) => ({
   },
 
   title: {
-    color: 'var(--title-color)',
+    color: '#F0D94E',
     fontWeight: 600,
     fontSize: '2rem',
     letterSpacing: '0.5px',
@@ -41,7 +42,7 @@ export default makeStyles((theme) => ({
   subTitle: {
     display: 'none',
     marginTop: '0.6rem',
-    color: 'var(--label-color)',
+    color: 'white',
     fontSize: '1.4rem',
     fontWeight: 500,
     letterSpacing: '0.5px',

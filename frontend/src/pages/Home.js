@@ -111,7 +111,7 @@ function HomePage() {
   return (
     <div
       style={{
-        height: "100%", width: "75%", margin: "30px auto", display: "flex",
+        height: "100%", width: "100%", marginTop: "-72px", display: "flex",
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
         border: "1px solid #c3c3c3",
         borderRadius: "4px",
@@ -127,9 +127,9 @@ function HomePage() {
               alignItems: "center",
             }}
           >
-            <div>
-              <p style={{ fontSize: "28px", fontWeight: "700" }}>Minna no Eigo</p>
-              <h3>Đem tiếng Anh đến với mọi người</h3>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <p style={{ fontSize: "40px", fontWeight: "700" }}>Minna no Eigo</p>
+              <h3 style={{ fontSize: "24px"}}>Đem tiếng Anh đến với mọi người</h3>
             </div>
           </div>
           {

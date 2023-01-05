@@ -40,7 +40,7 @@ function App() {
       ) : (
         <ThemeProvider theme={theme}>
           <Router>
-            <div className="dynonary-app">
+            <div className="dynonary-app" style={{height: '100%'}}>
               <Element name="scrollTop" />
               <Navigation />
 

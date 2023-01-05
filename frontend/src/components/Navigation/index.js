@@ -45,7 +45,7 @@ function Navigation() {
             </Link>
           )}
 
-          <div style={{ fontSize: "18px", fontWeight: "600", marginLeft: "20px" }}>
+          <div style={{ fontSize: "24px", fontWeight: "600", marginLeft: "20px" }}>
             <p>Minna no Eigo</p>
           </div>
           {/* control, setting */}
@@ -58,18 +58,7 @@ function Navigation() {
             )}
 
             {/* Search bar */}
-            <div className="mr-5">
-              <SearchInputCustom
-                placeholder="Nhập từ khoá ..."
-                showInput={isXsDevice || showInput}
-                prefixIcon={
-                  <Search
-                    className={classes.searchIcon}
-                    onClick={() => setShowInput(true)}
-                  />
-                }
-              />
-            </div>
+            
 
             {isAuth ? (
               <Avatar
