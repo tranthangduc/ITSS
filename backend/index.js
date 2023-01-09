@@ -14,6 +14,7 @@ const { MAX } = require('./src/constant');
 const corsConfig = require('./src/configs/cors.config');
 const accountApi = require('./src/apis/account.api');
 const wordApi = require('./src/apis/word.api');
+const storyApi = require('./src/apis/story.api')
 const gameApi = require('./src/apis/game.api');
 const flashcardApi = require('./src/apis/flashcard.api');
 const commonApi = require('./src/apis/common.api');
@@ -79,6 +80,7 @@ app.use(`${BASE_URL}/flashcard`, flashcardApi);
 app.use(`${BASE_URL}/common`, commonApi);
 app.use(`${BASE_URL}/sentence`, sentenceApi);
 app.use(`${BASE_URL}/blog`, blogApi);
+app.use(`${BASE_URL}/stories`, storyApi);
 app.use(
   `${BASE_URL}/highscore`,
   passportConfig.jwtAuthentication,

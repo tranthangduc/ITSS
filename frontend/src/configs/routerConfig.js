@@ -1,4 +1,5 @@
 import Logout from 'components/Logout';
+import StoryLevel from 'components/StoryList/StoryLevel/StoryLevel';
 import { ROUTES } from 'constant';
 import HomePage from 'pages/Home';
 import React from 'react';
@@ -54,6 +55,12 @@ const routes = [
     component: () => <IPAPage />,
   },
   {
+    path: ROUTES.STORY_LEVEL,
+    exact: true,
+    isProtect: false,
+    component: () => <StoryLevel />,
+  },
+  {
     path: ROUTES.CONTRIBUTION,
     exact: true,
     isProtect: false,
@@ -95,8 +102,26 @@ const routes = [
     isProtect: false,
     component: () => <DynoDictionaryPage isTOEIC={false} />,
   },
+  // {
+  //   path: ROUTES.STORY_LIST,
+  //   exact: false,
+  //   isProtect: false,
+  //   component: () => <StoryListPage isTOEIC={false} />,
+  // },
   {
-    path: ROUTES.STORY_LIST,
+    path: ROUTES.TOEIC_300,
+    exact: false,
+    isProtect: false,
+    component: () => <StoryListPage isTOEIC={false} />,
+  },
+  {
+    path: ROUTES.TOEIC_600,
+    exact: false,
+    isProtect: false,
+    component: () => <StoryListPage isTOEIC={false} />,
+  },
+  {
+    path: ROUTES.TOEIC_900,
     exact: false,
     isProtect: false,
     component: () => <StoryListPage isTOEIC={false} />,

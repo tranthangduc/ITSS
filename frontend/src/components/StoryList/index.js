@@ -32,12 +32,12 @@ function StoryList({
             onSelect={onSortTypeChange}
             classNameIcon="dyno-setting-icon mr-5"
           />
-          {!isTOEIC && (
+          {/* {!isTOEIC && (
             <DDSettingWordPack
               onChoose={onSettingWordPack}
               classNameIcon="dyno-setting-icon"
             />
-          )}
+          )} */}
         </div>
       </div>
       <div className="dyno-break"></div>
