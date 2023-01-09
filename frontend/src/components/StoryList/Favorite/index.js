@@ -7,6 +7,9 @@ import DynoDictionaryItemData from '../Item/data';
 import DynoDictionarySkeleton from '../Skeleton';
 import Word from 'components/PopupMean';
 import useStyle from '../style';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ReactDOMServer from "react-dom/server";
+import $ from 'jquery'
 
 const STORY = {
   name: 'The fox and the grapes',
@@ -21,6 +24,11 @@ const STORY = {
     'https://ila.edu.vn/uploads/SEO/ila-truyen-tieng-anh-cho-be-shutterstock_1296413959.jpg',
 };
 
+const Hello = () => <div>hello</div>;
+
+const html = ReactDOMServer.renderToStaticMarkup(<Hello />);
+const str = ReactDOMServer.renderToString(STORY.description)
+
 function FavoriteDictionary({
   list,
   loading,
@@ -32,17 +40,18 @@ function FavoriteDictionary({
 }) {
   const classes = useStyle();
 
+
   return (
     <div className={`${classes.root} dyno-container`}>
       {/* title - menu */}
       <div className="flex-center-between">
         <h1 className="dyno-title">Đọc truyện</h1>
-        <div>
+        {/* <div>
           <WordSortModal
             onSelect={onSortTypeChange}
             classNameIcon="dyno-setting-icon mr-5"
           />
-        </div>
+        </div> */}
       </div>
       <div className="dyno-break"></div>
 
@@ -55,7 +64,7 @@ function FavoriteDictionary({
             <h3 className="notfound-title h-100 flex-center t-center">
               {
                 <div>
-                One day a fox spied <Word id={"60cfe0c9f5dc801af8279f34"} word={"code"} /> a beautiful <Word id={"60d0205de09a5f00072cc4b3"} word={"expect"} /> bunch 
+                One day a fox spied <Word id={`60cfe0c9f5dc801af8279f34`} word={"code"} /> a beautiful <Word id={"60d0205de09a5f00072cc4b3"} word={"expect"} /> bunch 
                 of ripe <Word id={"60d06886f38ce90015e8ba36"} word={"name"} /> grapes hanging <Word id={"60d2947ca5b10d0015f98dc4"} word={"indicate"} /> from a vine along the <Word id={"60d29a3f012562001586f4f4"} word={"assure"} /> branches of a tree. 
                 The grapes seemed <Word id={"60d29be9012562001586f4f9"} word={"launch"} /> ready to burst <Word id={"60d2e5de012562001586f506"} word={"show"} /> with juice, 
                 and the fox is <Word id={"60d2eab0501c6f0015e40aac"} word={"implement"} /> mouth watered as he <Word id={"60d2ebf6501c6f0015e40aaf"} word={"prevent"} /> gazed longingly at them.

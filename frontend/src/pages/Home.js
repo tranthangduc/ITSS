@@ -44,7 +44,7 @@ const FEATURE_LIST = [
     title: 'Danh sách truyện',
     subTitle: 'Danh sách truyện được phân loại theo cấp độ, loại từ, ...',
     imgUrl: dictionaryIcon,
-    to: ROUTES.STORY_LIST,
+    to: ROUTES.STORY_LEVEL,
   },
   /* {
     title: 'Đọc truyện',
