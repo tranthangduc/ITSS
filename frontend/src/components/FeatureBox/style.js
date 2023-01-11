@@ -13,8 +13,8 @@ export default makeStyles((theme) => ({
     height: '100%',
 
     '&:hover, &:active': {
-      backgroundColor: '#669dd7',
-      boxShadow: '5px 10px #a7a4a4',
+      backgroundColor: '#1f44f3',
+      boxShadow: '5px 10px #4e4e4e',
     },
 
     [theme.breakpoints.up('sm')]: {

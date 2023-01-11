@@ -8,7 +8,7 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import SocialNetworkLogin from 'components/Login/SocialNetwork';
 import InputCustom from 'components/UI/InputCustom';
 import { formStyle } from 'components/UI/style';
-import { MAX, ROUTES } from 'constant';
+import { MAX, MIN, ROUTES } from 'constant';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -77,6 +77,7 @@ function LoginLocalForm(props) {
           error={Boolean(errors.password)}
           inputProps={{
             name: 'password',
+            minLength: MIN.PASSWORD_LEN,
             maxLength: MAX.PASSWORD_LEN,
             type: visiblePw ? 'text' : 'password',
             ...register('password'),

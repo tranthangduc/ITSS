@@ -44,7 +44,7 @@ export const MAX = {
 };
 
 export const MIN = {
-  PASSWORD_LEN: 6,
+  PASSWORD_LEN: 8,
 };
 
 export const ROUTES = {
