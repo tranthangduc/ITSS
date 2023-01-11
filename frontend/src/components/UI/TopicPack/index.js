@@ -5,22 +5,21 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TopicSelect from '../TopicSelect';
 import { TOPIC_OPTIONS } from 'constant/topics';
+import { WORD_LEVELS, WORD_SPECIALTY, WORD_TYPES } from 'constant';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import SelectCustom from 'components/UI/SelectCustom';
 import useStyle from './style';
 
-
 const formId = 'wordPackForm';
 
 function addAllOption(optionList = []) {
-    return [{ value: '-1', label: 'Tất cả' }, ...optionList];
+  return [{ value: '-1', label: 'Tất cả' }, ...optionList];
 }
 
-
 function TopicPack(props) {
-  const { 
+  const {
     onChoose,
     onCancel,
     open,
@@ -30,7 +29,7 @@ function TopicPack(props) {
     cancelBtnText,
     okBtnProps,
     cancelBtnProps,
-    } = props;
+  } = props;
 
   const classes = useStyle();
   const topics = useRef([]);
@@ -38,24 +37,53 @@ function TopicPack(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { target } = e;
-    const topic = target.topic?.value || '-1';
+    const type = target.type?.value || '-1',
+    specialty = target.specialty?.value || '-1',
+    topic = target.topic?.value || '-1',
+    level = target.level?.value || '-1';
 
     onChoose({
+      type,
+      specialty,
+      level,
       topics: topicMultiples ? topics.current : topic === '-1' ? [] : [topic],
     });
   };
   return (
-    <Dialog 
-        classes={{ paper: classes.dialogPaper}}
-        maxWidth="md"
-        fullWidth
-        open={open}
-    >
-      <DialogTitle classes={{ root: classes.title}}>{title}</DialogTitle>
+    <Dialog
+      classes={{ paper: classes.dialogPaper }}
+      maxWidth="md"
+      fullWidth
+      open={open}>
+      <DialogTitle classes={{ root: classes.title }}>{title}</DialogTitle>
 
       <DialogContent dividers classes={{ dividers: classes.breakLine }}>
         <form id={formId} onSubmit={handleSubmit}>
           <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <SelectCustom
+                label="Loại từ"
+                className="w-100"
+                options={addAllOption(WORD_TYPES)}
+                inputProps={{ name: 'type' }}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <SelectCustom
+                label="Cấp độ"
+                className="w-100"
+                options={addAllOption(WORD_LEVELS)}
+                inputProps={{ name: 'level' }}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <SelectCustom
+                label="Chuyên ngành"
+                className="w-100"
+                options={addAllOption(WORD_SPECIALTY)}
+                inputProps={{ name: 'specialty' }}
+              />
+            </Grid>
             {topicMultiples ? (
               <TopicSelect
                 onChange={(topicList) => (topics.current = topicList)}
@@ -120,14 +148,14 @@ TopicPack.propTypes = {
 };
 
 TopicPack.defaultProps = {
-    onChoose: function () {},
-    open: true,
-    topicMultiples: true,
-    title: 'Gói chủ đề',
-    okBtnText: 'Ok',
-    cancelBtnText: 'Đóng',
-    okBtnProps: {},
-    cancelBtnProps: {},
-  };
+  onChoose: function () {},
+  open: true,
+  topicMultiples: true,
+  title: 'Gói chủ đề',
+  okBtnText: 'Ok',
+  cancelBtnText: 'Đóng',
+  okBtnProps: {},
+  cancelBtnProps: {},
+};
 
-  export default TopicPack;
+export default TopicPack;

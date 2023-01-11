@@ -57,7 +57,11 @@ export const ROUTES = {
   CONTRIBUTION: '/contribution',
   FLASHCARD: '/flashcard',
   DYNO_DICTIONARY: '/dyno-dictionary',
+  STORY_LEVEL: '/story-level',
   STORY_LIST: '/story-list',
+  TOEIC_300: '/story-list/300',
+  TOEIC_600: '/story-list/600',
+  TOEIC_900: '/story-list/900',
   TOEIC_DICTIONARY: '/TOEIC-dictionary',
   COMMUNICATION_PHRASE: '/1000-communication-phrase',
   GRAMMAR: '/grammar',
@@ -142,28 +146,28 @@ export const WORD_LEVELS = [
     label: 'Chưa xác định',
   },
   {
-    value: 'A1',
-    label: 'A1',
+    value: '200+',
+    label: 'Toeic 200+',
   },
   {
-    value: 'A2',
-    label: 'A2',
+    value: '300+',
+    label: 'Toeic 300+',
   },
   {
-    value: 'B1',
-    label: 'B1',
+    value: '400+',
+    label: 'Toeic 400+',
   },
   {
-    value: 'B2',
-    label: 'B2',
+    value: '500+',
+    label: 'Toeic 500+',
   },
   {
-    value: 'C1',
-    label: 'C1',
+    value: '600+',
+    label: 'Toeic 600+',
   },
   {
-    value: 'C2',
-    label: 'C2',
+    value: '700+',
+    label: 'Toeic 700+',
   },
 ];
 

@@ -1,4 +1,5 @@
 import LoopIcon from '@material-ui/icons/Loop';
+import ArrowBack from '@material-ui/icons/ArrowBack';
 import StorySearchInput from 'components/UI/StorySearchInput';
 import InfiniteScroll from 'components/UI/InfiniteScroll';
 import WordSortModal from 'components/UI/WordSortModal';
@@ -8,6 +9,7 @@ import DynoDictionaryItemData from './Item/data';
 import DDSettingWordPack from './SettingWordPack';
 import StoryListSkeleton from './Skeleton';
 import useStyle from './style';
+import { useHistory } from 'react-router';
 
 function StoryList({
   list,
@@ -21,23 +23,30 @@ function StoryList({
   isTOEIC,
 }) {
   const classes = useStyle();
+  const history = useHistory();
+  const handleBack = () => {
+    history.goBack();
+  };
 
   return (
     <div className={`${classes.root} dyno-container`}>
       {/* title - menu */}
       <div className="flex-center-between">
+        <div style={{cursor: 'pointer'}} onClick={handleBack}>
+          <ArrowBack />
+        </div>
         <h1 className="dyno-title">Danh sách truyện</h1>
         <div>
           <WordSortModal
             onSelect={onSortTypeChange}
             classNameIcon="dyno-setting-icon mr-5"
           />
-          {!isTOEIC && (
+          {/* {!isTOEIC && (
             <DDSettingWordPack
               onChoose={onSettingWordPack}
               classNameIcon="dyno-setting-icon"
             />
-          )}
+          )} */}
         </div>
       </div>
       <div className="dyno-break"></div>
@@ -107,10 +116,10 @@ StoryList.defaultProps = {
   more: true,
   isFirstLoad: true,
   isTOEIC: false,
-  onLoadData: function () {},
-  onSearchWord: function () {},
-  onSettingWordPack: function () {},
-  onSortTypeChange: function () {},
+  onLoadData: function () { },
+  onSearchWord: function () { },
+  onSettingWordPack: function () { },
+  onSortTypeChange: function () { },
 };
 
 export default StoryList;

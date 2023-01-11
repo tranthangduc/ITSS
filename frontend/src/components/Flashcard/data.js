@@ -108,6 +108,17 @@ function FlashcardData() {
     }
   };
 
+  const gotoPage = (page) => {
+    if (page > 1) {
+      const oldList = list.current.slice(
+        (page - 2) * perPage,
+        (page - 1) * perPage,
+      );
+      setCurrentList(oldList);
+      setPageInfo({ ...pageInfo, page });
+    }
+  };
+
   const onWordPackChange = (newPackInfo) => {
     const { packInfo } = pageInfo;
 
@@ -163,6 +174,7 @@ function FlashcardData() {
       list={currentList}
       total={total}
       currentPage={pageInfo.page}
+      gotoPage={gotoPage}
       onNextPage={handleNextClick}
       onPrevPage={handlePrevClick}
       onWordPackChange={onWordPackChange}

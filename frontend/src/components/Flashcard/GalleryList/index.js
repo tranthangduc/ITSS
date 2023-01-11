@@ -1,11 +1,12 @@
 import Tooltip from '@material-ui/core/Tooltip';
+import Pagination from '@material-ui/lab/Pagination';
 import Skeleton from '@material-ui/lab/Skeleton';
 import PropTypes from 'prop-types';
 import React from 'react';
 import GalleryItem from '../GalleryItem';
 import useStyle from './style';
 
-function GalleryList({ list, onPrev, onNext, total, current, showMean }) {
+function GalleryList({ list, onPrev, onNext, total, current, showMean, gotoPage }) {
   const classes = useStyle();
 
   return (
@@ -28,6 +29,13 @@ function GalleryList({ list, onPrev, onNext, total, current, showMean }) {
               <span className="nav-arrow next" onClick={onNext} />
             </Tooltip>
           )}
+
+          <Pagination
+            color="primary"
+            count={total}
+            page={current}
+            onChange={(event, value) => gotoPage(value)}
+          />
         </>
       ) : (
         <>
@@ -53,6 +61,7 @@ GalleryList.propTypes = {
   onPrev: PropTypes.func,
   showMean: PropTypes.bool,
   total: PropTypes.number,
+  gotoPage: PropTypes.func,
 };
 
 GalleryList.defaultProps = {
