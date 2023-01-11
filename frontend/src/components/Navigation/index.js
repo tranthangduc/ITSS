@@ -37,17 +37,17 @@ function Navigation() {
           {/* Logo */}
           {(isXsDevice || !showInput) && (
             <Link to="/">
-              <img
-                className={`${classes.imgSize} ${classes.logo}`}
-                src={logoUrl}
-                alt="Logo"
-              />
+              <div
+                style={{
+                  fontSize: '24px',
+                  fontWeight: '600',
+                  marginLeft: '20px',
+                }}>
+                <p>Minna no Eigo</p>
+              </div>
             </Link>
           )}
 
-          <div style={{ fontSize: "24px", fontWeight: "600", marginLeft: "20px" }}>
-            <p>Minna no Eigo</p>
-          </div>
           {/* control, setting */}
           <div className={`${classes.control} flex-center--ver`}>
             {showInput && !isXsDevice && (
@@ -58,7 +58,6 @@ function Navigation() {
             )}
 
             {/* Search bar */}
-            
 
             {isAuth ? (
               <Avatar
