@@ -43,4 +43,8 @@ export default makeStyles(() => ({
       },
     },
   },
+  pagination: {
+    display: 'flex',
+    justifyContent: 'center'
+  }
 }));
