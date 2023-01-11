@@ -274,12 +274,12 @@
   }
 
   &.prev {
-    left: 0;
+    left: -25px;
     border-right: 1.8rem solid var(--primary-color);
   }
 
   &.next {
-    right: 0;
+    right: -25px;
     border-left: 1.8rem solid var(--primary-color);
   }
 }
