@@ -6,7 +6,15 @@ import React from 'react';
 import GalleryItem from '../GalleryItem';
 import useStyle from './style';
 
-function GalleryList({ list, onPrev, onNext, total, current, showMean, gotoPage }) {
+function GalleryList({
+  list,
+  onPrev,
+  onNext,
+  total,
+  current,
+  showMean,
+  gotoPage,
+}) {
   const classes = useStyle();
 
   return (
@@ -14,7 +22,7 @@ function GalleryList({ list, onPrev, onNext, total, current, showMean, gotoPage 
       {list && list.length > 0 ? (
         <>
           {/* gallery */}
-          {list.slice(0, 7).map((item, index) => (
+          {list.slice(0, 5).map((item, index) => (
             <GalleryItem key={index} {...item} showMean={showMean} />
           ))}
 
@@ -29,13 +37,14 @@ function GalleryList({ list, onPrev, onNext, total, current, showMean, gotoPage 
               <span className="nav-arrow next" onClick={onNext} />
             </Tooltip>
           )}
-
-          <Pagination
-            color="primary"
-            count={total}
-            page={current}
-            onChange={(event, value) => gotoPage(value)}
-          />
+          <div className={`${classes.pagination}`}>
+            <Pagination
+              color="primary"
+              count={total}
+              page={current}
+              onChange={(event, value) => gotoPage(value)}
+            />
+          </div>
         </>
       ) : (
         <>
