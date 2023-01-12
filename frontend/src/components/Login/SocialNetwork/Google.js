@@ -40,9 +40,6 @@ function LoginGoogle() {
         onLoginSuccess(data);
       }
     } catch (error) {
-      const message =
-        error.response?.data?.message || 'Đăng nhập thất bại, thử lại !';
-      dispatch(setMessage({ type: 'error', message }));
     }
   };
 

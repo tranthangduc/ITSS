@@ -39,16 +39,6 @@ function LoginFacebook() {
         }
       }
     } catch (error) {
-      const message =
-        error.response?.data?.message || 'Đăng nhập thất bại, thử lại !';
-
-      dispatch(
-        setMessage({
-          type: 'error',
-          message,
-          duration: UX.DELAY_TIME,
-        }),
-      );
     }
   };
 
