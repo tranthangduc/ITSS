@@ -115,10 +115,6 @@ function LoginLocalForm(props) {
         size="large">
         Đăng nhập
       </Button>
-
-      <div className="or-option w-100 t-center">HOẶC</div>
-
-      {props.children}
     </form>
   );
 }

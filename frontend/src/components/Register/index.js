@@ -131,9 +131,6 @@ function Register({ onRegister, loading }) {
         size="large">
         Đăng ký
       </Button>
-
-      <div className="or-option w-100 t-center">HOẶC</div>
-      <SocialNetworkLogin />
     </form>
   );
 }
