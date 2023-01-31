@@ -6,9 +6,9 @@ export default makeStyles((theme) => ({
     boxShadow: '5px 10px #888888',
     borderRadius: 'var(--sm-border-radius)',
     cursor: 'pointer',
+    margin: '2.4rem 1.8rem',
     backgroundColor: '#506DFA',
     transition: 'all 0.25s',
-
     minHeight: '8rem',
     height: '100%',
 

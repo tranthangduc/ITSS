@@ -143,27 +143,27 @@ export const WORD_LEVELS = [
   },
   {
     value: 'A1',
-    label: 'Toeic 200+',
+    label: 'Toeic 200 - 300',
   },
   {
     value: 'A2',
-    label: 'Toeic 300+',
+    label: 'Toeic 300 - 400',
   },
   {
     value: 'B1',
-    label: 'Toeic 400+',
+    label: 'Toeic 400 - 500 ',
   },
   {
     value: 'B2',
-    label: 'Toeic 500+',
+    label: 'Toeic 500 - 600',
   },
   {
     value: 'C1',
-    label: 'Toeic 600+',
+    label: 'Toeic 600 - 700',
   },
   {
     value: 'C2',
-    label: 'Toeic 700+',
+    label: 'Toeic 700 - 800',
   },
 ];
 
