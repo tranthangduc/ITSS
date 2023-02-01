@@ -6,7 +6,16 @@ import useStyle from './style';
 function FeatureBox({ to, imgUrl, title, subTitle }) {
   const classes = useStyle();
   return (
-    <Link to={to} className={`${classes.root} flex-center--ver w-100`}>
+    <Link to={to} className={`${classes.root} flex-center--ver w-100`} 
+    style={{
+      minHeight: "14rem",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      lineHeight: "25px",
+      WebkitLineClamp: "2",
+      height: "75px",
+      WebkitBoxOrient: "vertical",
+    }}>
       <img className={classes.icon} src={imgUrl} alt="Icon" />
       <div>
         <h2 className={classes.title}>{title}</h2>
