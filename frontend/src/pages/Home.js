@@ -119,10 +119,10 @@ function HomePage() {
       }}
     >
       <div className={classes.bg}>
-        <div className="container my-10">
+        <div className="container my-10" style={{height: "80%"}}>
           <div
             style={{
-              margin: "110px 0 130px 0",
+              margin: "110px 0 70px 0",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
