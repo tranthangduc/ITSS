@@ -22,27 +22,6 @@ function LeaderBoardPage() {
 
         <div className="leaderboard-grid">
           <LeaderBoardData
-            title="Top triệu phú Dyno Coin"
-            color={COLORS[0]}
-            nameId={HIGHSCORE_NAME.TOP_COIN}
-            unit="$"
-            tooltip="Top những người dùng có số coin nhiều nhất"
-          />
-          <LeaderBoardData
-            title="Top thiện xạ"
-            color={COLORS[1]}
-            nameId={HIGHSCORE_NAME.CORRECT_GAME_RIGHT}
-            unit="câu"
-            tooltip="Top những người dùng có số câu đúng nhiều nhất"
-          />
-          <LeaderBoardData
-            title="Top không trượt phát nào"
-            color={COLORS[2]}
-            nameId={HIGHSCORE_NAME.CORRECT_GAME_RIGHT_CONSECUTIVE}
-            unit="câu"
-            tooltip="Top những người dùng có số câu đúng liên tục nhiều nhất"
-          />
-          <LeaderBoardData
             title="Top tay nhanh hơn não"
             color={COLORS[3]}
             nameId={HIGHSCORE_NAME.FAST_GAME}

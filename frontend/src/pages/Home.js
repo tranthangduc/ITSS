@@ -82,7 +82,7 @@ const FEATURE_LIST = [
     subTitle: 'Danh sách tổng hợp những cấu trúc câu trong tiếng Anh',
     to: ROUTES.GRAMMAR,
   },*/
-  /*{
+  {
     title: 'Play Games',
     imgUrl: gameIcon,
     subTitle:
@@ -95,6 +95,7 @@ const FEATURE_LIST = [
     subTitle: 'Cùng xem thành tích của bạn bè và những người khác nhé',
     to: ROUTES.LEADERBOARD,
   },
+  /*
   {
     title: 'Đóng góp',
     imgUrl: editIcon,
@@ -139,7 +140,7 @@ function HomePage() {
               alignItems="center"
             >
               {FEATURE_LIST.map((box, index) => (
-                <Grid item xs={8} md={8} lg={4} key={index}>
+                <Grid item xs={5} md={5} lg={5} key={index}>
                   <FeatureBox
                     imgUrl={box.imgUrl}
                     title={box.title}
