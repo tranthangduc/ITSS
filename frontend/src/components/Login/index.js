@@ -43,6 +43,7 @@ function LoginLocalForm(props) {
 
   return (
     <form
+      style= {{width: "45rem", height: "45rem"}}
       className={`${classes.root} flex-col`}
       onSubmit={handleSubmit(onLogin)}
       autoComplete="off">

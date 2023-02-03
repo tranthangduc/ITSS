@@ -71,27 +71,13 @@ const GAME_LIST = [
     to: GAMES.VIP,
   }, */
 ];
+import FastGameData from 'components/PlayGames/FastGame/data';
+import useCloseNavigation from 'hooks/useCloseNavigation';
 
 function PlayGamesPage() {
-  useTitle('Game');
-  useScrollTop();
-
-  return (
-    <div className="container my-10">
-      <Grid container spacing={3}>
-        {GAME_LIST.map((box, index) => (
-          <Grid item xs={12} md={6} lg={4} key={index}>
-            <FeatureBox
-              imgUrl={box.imgUrl}
-              title={box.title}
-              to={box.to}
-              subTitle={box.subTitle}
-            />
-          </Grid>
-        ))}
-      </Grid>
-    </div>
-  );
+  useTitle('Game tay nhanh hơn não');
+  useCloseNavigation();
+  return <FastGameData />;
 }
 
 export default PlayGamesPage;
