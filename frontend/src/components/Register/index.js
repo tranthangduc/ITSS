@@ -49,6 +49,7 @@ function Register({ onRegister, loading }) {
 
   return (
     <form
+      style= {{width: "45rem", height: "45rem"}}
       className={`${classes.root} flex-col`}
       onSubmit={handleSubmit(onRegister)}
       autoComplete="off">

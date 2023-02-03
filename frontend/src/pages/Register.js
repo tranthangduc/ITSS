@@ -16,10 +16,11 @@ function RegisterPage() {
         <RegisterData />
 
         <div className="has-account">
-          Bạn đã có tài khoản?&nbsp;
-          <Link to={ROUTES.LOGIN} className="account-link">
-            Đăng nhập
-          </Link>
+          <p style={{fontSize: "2rem"}}>Bạn đã có tài khoản?&nbsp;
+            <Link to={ROUTES.LOGIN} className="account-link">
+              Đăng nhập
+            </Link>
+          </p>
         </div>
       </div>
     </div>
