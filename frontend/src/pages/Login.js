@@ -16,10 +16,11 @@ function LoginPage() {
         <LoginData />
 
         <div className="has-account">
-          Bạn chưa có tài khoản?&nbsp;
-          <Link to={ROUTES.REGISTER} className="account-link">
-            Đăng ký
-          </Link>
+          <p style={{fontSize: "2rem"}}>Bạn chưa có tài khoản?&nbsp;
+            <Link to={ROUTES.REGISTER} className="account-link">
+              Đăng ký
+            </Link>
+          </p>
         </div>
       </div>
     </div>

@@ -73,7 +73,7 @@ const routes = [
     component: () => <Logout />,
   },
   {
-    path: ROUTES.GAMES.HOME,
+    path: ROUTES.GAMES.FAST_GAME,
     exact: true,
     isProtect: false,
     component: () => <PlayGamesPage />,
