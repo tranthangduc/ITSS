@@ -9,6 +9,7 @@ const {
   getWordDetail,
   getFavoriteList,
   getWordById,
+  getWordByWord
 } = require('../services/word.service');
 
 exports.postContributeWord = async (req, res, next) => {
@@ -150,4 +151,10 @@ exports.getWordById = async (req, res) => {
   const { id } = req.params;
   const word = await getWordById(id);
   return res.status(200).json(word);
+}
+
+exports.getWordByCode = async (req, res) => {
+  const { word } = req.params;
+  const result = await getWordByWord(word);
+  return res.status(200).json(result);
 }
