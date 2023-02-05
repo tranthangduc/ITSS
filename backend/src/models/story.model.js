@@ -23,6 +23,11 @@ const storySchema = new Schema({
     trim: true,
     default: null,
   },
+  values: {
+    type: String,
+    trim: true,
+    default: null,
+  }
 });
 
 const StoryModel = mongoose.model('stories', storySchema, 'stories');

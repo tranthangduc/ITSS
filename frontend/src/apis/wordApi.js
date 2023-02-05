@@ -34,8 +34,12 @@ const wordApi = {
     });
   },
 
-  getMeanOfWord: (id) => {
-    return axiosClient.get(`${URL}/${id}`);
+  // getMeanOfWord: (id) => {
+  //   return axiosClient.get(`${URL}/${id}`);
+  // },
+
+  getMeanOfWordByCode: (word) => {
+    return axiosClient.get(`${URL}/word/${word}`);
   },
 };
 
