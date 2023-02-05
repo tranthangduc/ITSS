@@ -95,14 +95,14 @@ const FEATURE_LIST = [
     subTitle: 'Cùng xem thành tích của bạn bè và những người khác nhé',
     to: ROUTES.LEADERBOARD,
   },
-  /*
+
   {
     title: 'Đóng góp',
     imgUrl: editIcon,
     subTitle:
       'Minna no Eigo rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
     to: ROUTES.CONTRIBUTION,
-  }, */
+  }, 
 ];
 
 function HomePage() {

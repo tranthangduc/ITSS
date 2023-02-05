@@ -38,7 +38,7 @@ function WordPack(props) {
     e.preventDefault();
     const { target } = e;
     const type = target.type?.value || '-1',
-      specialty = target.specialty?.value || '-1',
+      // specialty = target.specialty?.value || '-1',
       topic = target.topic?.value || '-1',
       level = target.level?.value || '-1';
 
@@ -76,14 +76,6 @@ function WordPack(props) {
                 className="w-100"
                 options={addAllOption(WORD_LEVELS)}
                 inputProps={{ name: 'level' }}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <SelectCustom
-                label="Chuyên ngành"
-                className="w-100"
-                options={addAllOption(WORD_SPECIALTY)}
-                inputProps={{ name: 'specialty' }}
               />
             </Grid>
 
