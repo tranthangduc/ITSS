@@ -76,3 +76,22 @@ exports.getWordById = async id => {
     }
   }
 }
+
+exports.getWordByWord = async word => {
+  const searchResult = await WordModel.findOne({ word: word });
+  if (!searchResult) {
+    return {
+      code: 404,
+      data: {}
+    }
+  } else return {
+    code: 200,
+    data: {
+      word: searchResult.word,
+      picture: searchResult.picture,
+      phonetic: searchResult.phonetic,
+      mean: searchResult.mean,
+      phonetic: searchResult.phonetic
+    }
+  }
+}

@@ -28,6 +28,7 @@ function StoryListData({ isTOEIC }) {
   });
   const [more, setMore] = useState(true); // toggle infinite scrolling
   const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const [isReload, setReload] = useState(false);
   const totalPage = useRef(0);
   const preSearchList = useRef([]);
 
@@ -84,6 +85,10 @@ function StoryListData({ isTOEIC }) {
     setFilter(newFilter);
   };
 
+  const reloadData = () => {
+    loadData();
+  }
+
   // get word pack
   useEffect(() => {
     let isSub = true;
@@ -125,6 +130,7 @@ function StoryListData({ isTOEIC }) {
         isFirstLoad={isFirstLoad}
         onSortTypeChange={onSortTypeChange}
         onSearchWord={onSearchWord}
+        onReload={reloadData}
       />
       <WordDetailModal />
     </>

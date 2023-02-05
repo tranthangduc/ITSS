@@ -26,3 +26,32 @@ exports.getStories = async (filter) => {
     }
   }
 }
+
+exports.getStoryById = async (id) => {
+  const searchResult = await StoryModel.findById(id);
+  if (!searchResult) {
+    return {
+      code: 404,
+      data: {}
+    }
+  } else return {
+    code: 200,
+    data: {
+      name: searchResult.name,
+      picture: searchResult.picture,
+      description: searchResult.description,
+      values: searchResult.values,
+      listWords: searchResult.listWords
+    }
+  }
+}
+
+exports.createStory = async (name, description, picture, values) => {
+  try {
+    const newStory = await StoryModel.create({name, description, picture, values});
+    if (newStory && newStory._id) return newStory;
+    return null; 
+  } catch (error) {
+    throw error;
+  }
+}

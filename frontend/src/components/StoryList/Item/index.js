@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
   mean,
   onShowDetail,
 }) */
-function DynoDictionaryItem({ name, description, picture }) {
+function DynoDictionaryItem({ name, description, picture, _id }) {
   const classes = useStyle();
   // const imgSrc = cloudinaryImgOptimize(
   //   picture ? picture : DEFAULTS.IMAGE_SRC,
@@ -32,7 +32,7 @@ function DynoDictionaryItem({ name, description, picture }) {
         className="w-100 flex-center--ver"
         /* onClick={() => onShowDetail(word)} */
       >
-        <Link to={ROUTES.STORY}>
+        <Link to={`${ROUTES.STORY}/${_id}`}>
           <div className={classes.wrapper_item}>
             <img className={classes.picture} src={picture} alt="photo" />
             <div className="ml-8 flex-grow-1">
