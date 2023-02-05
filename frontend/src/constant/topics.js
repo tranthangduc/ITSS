@@ -64,7 +64,7 @@ export const TOPICS = [
   },
   {
     key: '9',
-    title: 'Công nghệ',
+    title: 'Công nghệ thông tin',
     icon: technologyIcon,
   },
   {
