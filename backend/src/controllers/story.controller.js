@@ -6,7 +6,8 @@ const {
 const {
     getStories,
     getStoryById,
-    createStory
+    createStory,
+    deleteStoryById
 } = require('../services/story.service');
 
 exports.getStories= async (req, res) => {
@@ -23,5 +24,11 @@ exports.getStortById= async (req, res) => {
 exports.createStory= async (req, res) => {
     const {name, description, picture, values} = req.body;
     const result = await createStory(name, description, picture, values);
+    return res.status(200).json(result);
+}
+
+exports.deleteStory = async (req, res) => {
+    const {id} = req.params;
+    const result = await deleteStoryById(id);
     return res.status(200).json(result);
 }

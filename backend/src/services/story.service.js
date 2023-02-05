@@ -55,3 +55,12 @@ exports.createStory = async (name, description, picture, values) => {
     throw error;
   }
 }
+
+exports.deleteStoryById = async (id) => {
+  try {
+    const newStory = await StoryModel.deleteOne({_id: id});
+    return newStory; 
+  } catch (error) {
+    throw error;
+  }
+}
