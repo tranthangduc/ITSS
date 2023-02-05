@@ -88,6 +88,10 @@ function StoryList({
     onReload();
   }
 
+  const reloadListStories = () => {
+    onReload();
+  }
+
   return (
     <div className={`${classes.root} dyno-container`}>
       {/* title - menu */}
@@ -128,7 +132,10 @@ function StoryList({
                       {/* render list */}
                       {list.map((item, index) => (
                         <li className={classes.listItem} key={index}>
-                          <DynoDictionaryItemData {...item} />
+                          <DynoDictionaryItemData
+                            onLoadData={reloadListStories}
+                            {...item} 
+                          />
                         </li>
                       ))}
 

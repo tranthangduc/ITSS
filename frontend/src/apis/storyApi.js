@@ -13,6 +13,10 @@ const storyApi = {
 
   createStory: (body) => {
     return axiosClient.post(`${URL}/create`, body);
+  },
+
+  deleteStoryById: (id) => {
+    return axiosClient.delete(`${URL}/deleteItem/${id}`)
   }
 };
 
