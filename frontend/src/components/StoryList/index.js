@@ -133,7 +133,7 @@ function StoryList({
                       {list.map((item, index) => (
                         <li className={classes.listItem} key={index}>
                           <DynoDictionaryItemData
-                            onLoadData={reloadListStories}
+                            onLoadDataStoryItem={reloadListStories}
                             {...item} 
                           />
                         </li>

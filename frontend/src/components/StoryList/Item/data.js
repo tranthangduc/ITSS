@@ -23,9 +23,14 @@ function DynoDictionaryItemData(props) {
     }
   };
 
+  const reloadStories = () => {
+    const {onLoadDataStoryItem} = props;
+    onLoadDataStoryItem();
+  }
+
   return (
     <>
-      <DynoDictionaryItem {...props} onShowDetail={onShowDetail} />
+      <DynoDictionaryItem {...props} onReloadData={reloadStories} onShowDetail={onShowDetail} />
 
       {modal.open && (
         <WordDetailModal
