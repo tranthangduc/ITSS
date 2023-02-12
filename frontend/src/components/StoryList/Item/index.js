@@ -25,7 +25,7 @@ import storyApi from 'apis/storyApi';
   mean,
   onShowDetail,
 }) */
-function DynoDictionaryItem({ name, description, picture, _id, onLoadData }) {
+function DynoDictionaryItem({ name, description, picture, _id, onReloadData }) {
   const [isDelete, setDelete] = useState(false);
   const classes = useStyle();
   const [showPopupDelete, setShowDelete] = useState(false);
@@ -54,7 +54,7 @@ function DynoDictionaryItem({ name, description, picture, _id, onLoadData }) {
   }
   const handleConfirmDelete = async (id) =>{
     await storyApi.deleteStoryById(id);
-    onLoadData()
+    onReloadData();
     setShowDelete(false);
   }
 
