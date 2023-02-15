@@ -8,22 +8,22 @@ import { ROUTES } from 'constant';
 const FEATURE_LIST = [
     {
         title: 'Toeic 300',
-        subTitle:
-            'Flashcard phương pháp học từ vựng nổi tiếng',
+        // subTitle:
+        //     'Flashcard phương pháp học từ vựng nổi tiếng',
         imgUrl: flashcardIcon,
         to: ROUTES.TOEIC_300,
     },
     {
         title: 'Toeic 600',
-        subTitle:
-            'Flashcard phương pháp học từ vựng nổi tiếng',
+        // subTitle:
+        //     'Flashcard phương pháp học từ vựng nổi tiếng',
         imgUrl: flashcardIcon,
         to: ROUTES.TOEIC_600,
     },
     {
         title: 'Toeic 900',
-        subTitle:
-            'Flashcard phương pháp học từ vựng nổi tiếng',
+        // subTitle:
+        //     'Flashcard phương pháp học từ vựng nổi tiếng',
         imgUrl: flashcardIcon,
         to: ROUTES.TOEIC_900,
     },

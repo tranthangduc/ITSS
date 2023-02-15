@@ -86,8 +86,14 @@ const FEATURE_LIST = [
     title: 'Play Games',
     imgUrl: gameIcon,
     subTitle:
-      'Ôn luyện kiến thức hiệu quả và đỡ nhàm chán hơn qua việc chơi game cùng Dyno nhé',
+      'Ôn luyện kiến thức hiệu quả và đỡ nhàm chán hơn qua việc chơi game  nhé',
     to: ROUTES.GAMES.FAST_GAME,
+  },
+  {
+    title: 'Test',
+    imgUrl: ipaIcon,
+    subTitle: 'Những bài kiểm tra giúp ôn tập lại kiến thức ',
+    to: ROUTES.GAMES.CORRECT_WORD,
   },
   {
     title: 'Bảng xếp hạng',
@@ -95,14 +101,14 @@ const FEATURE_LIST = [
     subTitle: 'Cùng xem thành tích của bạn bè và những người khác nhé',
     to: ROUTES.LEADERBOARD,
   },
-
-  {
-    title: 'Đóng góp',
-    imgUrl: editIcon,
-    subTitle:
-      'Minna no Eigo rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
-    to: ROUTES.CONTRIBUTION,
-  }, 
+  
+  // {
+  //   title: 'Đóng góp',
+  //   imgUrl: editIcon,
+  //   subTitle:
+  //     'Minna no Eigo rất mong được sự đóng góp của bạn. Bạn có thể thêm từ mới, sửa lỗi sai',
+  //   to: ROUTES.CONTRIBUTION,
+  // }, 
 ];
 
 function HomePage() {

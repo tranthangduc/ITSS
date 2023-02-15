@@ -100,10 +100,10 @@ function DynoDictionaryItem({ name, description, picture, _id, onReloadData }) {
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
           >
-            <DialogTitle id="alert-dialog-title">{"Confirm delete story"}</DialogTitle>
+            <DialogTitle id="alert-dialog-title">{"Xác nhận xóa truyện"}</DialogTitle>
             <DialogContent>
               <DialogContentText id="alert-dialog-description">
-                Are you sure you want to delete this story? If you agree, please click Agree or otherwise click Cancel
+                Bạn chắc chắn muốn xóa truyện này? Nếu bạn đồng ý, hãy chọn Agree hoặc chọn Cancel để hủy 
               </DialogContentText>
             </DialogContent>
             <DialogActions>

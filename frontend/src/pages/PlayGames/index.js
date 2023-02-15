@@ -14,13 +14,13 @@ import React from 'react';
 const { GAMES } = ROUTES;
 
 const GAME_LIST = [
-  // {
-  //   title: 'Hãy chọn từ đúng',
-  //   subTitle:
-  //     'Ôn tập từ vựng bằng cách chọn 1 đáp án đúng nhất trong 4 câu trả lời có nghĩa khớp với từ được cho.',
-  //   imgUrl: correctWordIcon,
-  //   to: GAMES.CORRECT_WORD,
-  // },
+  {
+    title: 'Hãy chọn từ đúng',
+    subTitle:
+      'Ôn tập từ vựng bằng cách chọn 1 đáp án đúng nhất trong 4 câu trả lời có nghĩa khớp với từ được cho.',
+    imgUrl: correctWordIcon,
+    to: GAMES.CORRECT_WORD,
+  },
   // {
   //   title: 'Ghép từ',
   //   subTitle:
@@ -81,3 +81,4 @@ function PlayGamesPage() {
 }
 
 export default PlayGamesPage;
+

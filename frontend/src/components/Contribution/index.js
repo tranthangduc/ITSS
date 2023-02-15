@@ -16,11 +16,11 @@ function Contribution() {
             onClick={() => setMode(0)}>
             Thêm từ
           </li>
-          <li
+          {/* <li
             className={`${classes.tab} ${mode === 1 ? 'active' : ''}`}
             onClick={() => setMode(1)}>
             Thêm câu
-          </li>
+          </li> */}
         </ul>
 
         <div className={classes.tabContent}>
