@@ -18,7 +18,10 @@ import useTitle from 'hooks/useTitle';
 import React from 'react';
 import logoUrl from 'assets/images/sach.jpg';
 import useStyle from '../components/popup';
+import correctWordIcon from 'assets/icons/games/correct-word.png';
 
+
+const { GAMES } = ROUTES;
 const FEATURE_LIST = [
   /*{
     title: 'Bảng phiên âm (IPA)',
@@ -45,6 +48,13 @@ const FEATURE_LIST = [
     subTitle: 'Danh sách truyện được phân loại theo cấp độ, loại từ, ...',
     imgUrl: dictionaryIcon,
     to: ROUTES.STORY_LIST,
+  },
+  {
+    title: 'Test',
+    subTitle:
+      'Ôn tập từ vựng bằng cách chọn 1 đáp án đúng nhất trong 4 câu trả lời có nghĩa khớp với từ được cho.',
+    imgUrl: correctWordIcon,
+    to: GAMES.CORRECT_WORD,
   },
   /* {
     title: 'Đọc truyện',

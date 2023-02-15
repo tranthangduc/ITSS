@@ -38,7 +38,7 @@ function WordPack(props) {
     e.preventDefault();
     const { target } = e;
     const type = target.type?.value || '-1',
-      // specialty = target.specialty?.value || '-1',
+      specialty = target.specialty?.value || '-1',
       topic = target.topic?.value || '-1',
       level = target.level?.value || '-1';
 

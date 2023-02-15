@@ -35,12 +35,12 @@ const GAME_LIST = [
     imgUrl: brainIcon,
     to: GAMES.FAST_GAME,
   },
-  /* {
-    title: 'Hãy chọn từ đúng (nâng cao)',
-    subTitle: 'Chọn tất cả các từ đồng nghĩa (trái nghĩa) với từ đã cho.',
-    imgUrl: correctWordAdvIcon,
-    to: GAMES.CORRECT_WORD_ADV,
-  }, */
+// {
+//     title: 'Hãy chọn từ đúng (nâng cao)',
+//     subTitle: 'Chọn tất cả các từ đồng nghĩa (trái nghĩa) với từ đã cho.',
+//     imgUrl: correctWordIcon,
+//     to: GAMES.CORRECT_WORD_ADV,
+//   }, 
 
   /*  {
     title: 'Ai là triệu phú',
